@@ -6,12 +6,12 @@ elements.forEach((name) => {loadStyle(name);});
 document.querySelector('.settings').addEventListener('click', () => {
     if(!document.querySelector('.settingsContainer')){
         OpenSettings();
-        document.querySelector('.settingsImg').setAttribute('src', "/public/icons/check_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg");
+        document.querySelector('.settingsImg').setAttribute('src', "/agimnMirror/icons/check_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg");
         document.querySelector('.settings').setAttribute('style', "border-color:yellow;");
     }
     else{
         CloseSettings();
-        document.querySelector('.settingsImg').setAttribute('src', "/public/icons/settings.svg");
+        document.querySelector('.settingsImg').setAttribute('src', "/agimnMirror/icons/settings.svg");
         document.querySelector('.settings').setAttribute('style', "");
     }
 });
@@ -24,7 +24,7 @@ function OpenSettings(){
     settingsContainer.setAttribute("class", "settingsContainer");
     resetButton.setAttribute("class", "resetButton");
     settingsContainer = document.querySelector('.settingsContainer');
-    document.querySelector('.resetButton').innerHTML = `<img class="settingsImg" src="/public/icons/reset.svg">`;
+    document.querySelector('.resetButton').innerHTML = `<img class="settingsImg" src="/agimnMirror/icons/reset.svg">`;
     document.querySelector('.resetButton').addEventListener('click', () => {
         elements.filter((word) => word != "BG").forEach((name) => {Reset(name, rgbToHex(230, 230, 230), false);});
         Reset("BG", rgbToHex(0, 0, 0), false);
