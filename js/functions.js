@@ -14,11 +14,11 @@ export function themeSwitch(){
     if (document.querySelector(".themeSwitch")){
         if (themes == 0){
         document.querySelector('html').classList.add('theme-inv');
-        document.querySelector('.themeSwitch').innerHTML = '<img class="themeImg" src="/public/icons/light_mode_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg">';
+        document.querySelector('.themeSwitch').innerHTML = '<img class="themeImg" src="/agimnMirror/icons/light_mode_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg">';
         }
         else {
             document.querySelector('html').classList.remove('theme-inv');
-            document.querySelector('.themeSwitch').innerHTML = '<img class="themeImg" src="/public/icons/dark_mode_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg">';
+            document.querySelector('.themeSwitch').innerHTML = '<img class="themeImg" src="/agimnMirror/icons/dark_mode_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg">';
         }
     }  
 }
