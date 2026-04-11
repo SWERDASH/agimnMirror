@@ -2,8 +2,8 @@ import { tasks, saveTasksToStorage } from "./tasks.js";
 import { expandimages } from "./functions.js"; 
 var logi = localStorage.getItem('login');
 var parl = localStorage.getItem('parl')
-let logins = ['admin', 'TaskManager', 'swerdash'];
-let passwords = ['TaskAdmin', 'password', 'anim'];
+let logins = ['132', '123', '123'];
+let passwords = ['23n', 'pas23rd', 'an2i32m'];
 
 if (document.querySelector('.ver')){
     document.querySelector('.ver').addEventListener('click', () => {
@@ -36,19 +36,19 @@ function verify(){
 
 export function loadTaskManagerPanel(login){
     let newScript1 = document.createElement("script");
-    newScript1.src = '/public/js/main.js';
+    newScript1.src = '/agimnMirror/js/main.js';
     newScript1.type = 'module';
     let newScript2 = document.createElement("script");
-    newScript2.src = '/public/js/select2.js';
+    newScript2.src = '/agimnMirror/js/select2.js';
     newScript2.type = 'module';
     let newScript3 = document.createElement("script");
-    newScript3.src = '/public/js/tasks.js';
+    newScript3.src = '/agimnMirror/js/tasks.js';
     newScript3.type = 'module';
     let newScript4 = document.createElement("script");
-    newScript4.src = '/public/js/taskmanager.js';
+    newScript4.src = '/agimnMirror/js/taskmanager.js';
     newScript4.type = 'module';
     let newScript5 = document.createElement("script");
-    newScript5.src = '/public/js/select3.js';
+    newScript5.src = '/agimnMirror/js/select3.js';
     newScript5.type = 'module';
         document.querySelector('.page').innerHTML = `
         <div class="expanded-image"></div>
@@ -56,70 +56,70 @@ export function loadTaskManagerPanel(login){
             <div class="filter tskm">
                 <div class="custom-select custom-tskm">
                     <select class="subjf" id="subj" title="Предмет" name="select">
-                        <option id="0" src="/public/icons/subjects.svg">Предметы</option>
-                        <option id="1" src="/public/icons/Математика.svg">Математика</option>
-                        <option id="2" src="/public/icons/Русский.svg">Русский</option>
-                        <option id="3" src="/public/icons/Литература.svg">Литература</option>
-                        <option id="4" src="/public/icons/Английский.svg">Английский</option>
-                        <option id="5" src="/public/icons/Физика.svg">Физика</option>
-                        <option id="6" src="/public/icons/Химия.svg">Химия</option>
-                        <option id="7" src="/public/icons/История.svg">История</option>
-                        <option id="8" src="/public/icons/Общество.svg">Общество</option>
-                        <option id="9" src="/public/icons/География.svg">География</option>
-                        <option id="10" src="/public/icons/Биология.svg">Биология</option>
-                        <option id="11" src="/public/icons/Педагогика.svg">Педагогика</option>
-                        <option id="12" src="/public/icons/Информатика.svg">Информатика</option>
-                        <option id="13" src="/public/icons/Раб_с_текстом.svg">Раб с текстом</option>
-                        <option id="14" src="/public/icons/ОБЗР.svg">ОБЗР</option>
-                        <option id="0" src="/public/icons/subjects.svg">Предметы</option>
+                        <option id="0" src="/agimnMirror/icons/subjects.svg">Предметы</option>
+                        <option id="1" src="/agimnMirror/icons/Математика.svg">Математика</option>
+                        <option id="2" src="/agimnMirror/icons/Русский.svg">Русский</option>
+                        <option id="3" src="/agimnMirror/icons/Литература.svg">Литература</option>
+                        <option id="4" src="/agimnMirror/icons/Английский.svg">Английский</option>
+                        <option id="5" src="/agimnMirror/icons/Физика.svg">Физика</option>
+                        <option id="6" src="/agimnMirror/icons/Химия.svg">Химия</option>
+                        <option id="7" src="/agimnMirror/icons/История.svg">История</option>
+                        <option id="8" src="/agimnMirror/icons/Общество.svg">Общество</option>
+                        <option id="9" src="/agimnMirror/icons/География.svg">География</option>
+                        <option id="10" src="/agimnMirror/icons/Биология.svg">Биология</option>
+                        <option id="11" src="/agimnMirror/icons/Педагогика.svg">Педагогика</option>
+                        <option id="12" src="/agimnMirror/icons/Информатика.svg">Информатика</option>
+                        <option id="13" src="/agimnMirror/icons/Раб_с_текстом.svg">Раб с текстом</option>
+                        <option id="14" src="/agimnMirror/icons/ОБЗР.svg">ОБЗР</option>
+                        <option id="0" src="/agimnMirror/icons/subjects.svg">Предметы</option>
                     </select>
                 </div>
                 <input type="date" class="date date-tskm DATE">
                 <div class="custom-select custom-tskm">
                     <select class="typef" id="type" title="Не важно" name="select">
-                        <option id="0" src="/public/icons/0.svg">Не важно</option>
-                        <option id="1" src="/public/icons/1.svg">Устно</option>
-                        <option id="2" src="/public/icons/2.svg">Письменно</option>
-                        <option id="3" src="/public/icons/3.svg">Уст. пис.</option>
-                        <option id="0" src="/public/icons/0.svg">Не важно</option>
+                        <option id="0" src="/agimnMirror/icons/0.svg">Не важно</option>
+                        <option id="1" src="/agimnMirror/icons/1.svg">Устно</option>
+                        <option id="2" src="/agimnMirror/icons/2.svg">Письменно</option>
+                        <option id="3" src="/agimnMirror/icons/3.svg">Уст. пис.</option>
+                        <option id="0" src="/agimnMirror/icons/0.svg">Не важно</option>
                     </select>
                 </div>
             </div>
-            <img class="icon-url" src="/public/icons/urlk.svg">
+            <img class="icon-url" src="/agimnMirror/icons/urlk.svg">
             <textarea class="text text-input" placeholder="Задание" rows="5" cols="33"></textarea>
-            <img title="Добавить задание" class="button addTask" src="/public/icons/add_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg">
+            <img title="Добавить задание" class="button addTask" src="/agimnMirror/icons/add_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg">
         </div>
         <div class="taskmanager">
             <div class="filter-frame">
                     <div class="filter">
                         <div class="custom-select taskm">
                             <select class="subj" id="subjf" title="Предмет" name="select">
-                                <option id="0" src="/public/icons/subjects.svg">Предметы</option>
-                                <option id="1" src="/public/icons/Математика.svg">Математика</option>
-                                <option id="2" src="/public/icons/Русский.svg">Русский</option>
-                                <option id="3" src="/public/icons/Литература.svg">Литература</option>
-                                <option id="4" src="/public/icons/Английский.svg">Английский</option>
-                                <option id="5" src="/public/icons/Физика.svg">Физика</option>
-                                <option id="6" src="/public/icons/Химия.svg">Химия</option>
-                                <option id="7" src="/public/icons/История.svg">История</option>
-                                <option id="8" src="/public/icons/Общество.svg">Общество</option>
-                                <option id="9" src="/public/icons/География.svg">География</option>
-                                <option id="10" src="/public/icons/Биология.svg">Биология</option>
-                                <option id="11" src="/public/icons/Педагогика.svg">Педагогика</option>
-                                <option id="12" src="/public/icons/Информатика.svg">Информатика</option>
-                                <option id="13" src="/public/icons/Раб_с_текстом.svg">Раб с текстом</option>
-                                <option id="14" src="/public/icons/ОБЗР.svg">ОБЗР</option>
-                                <option id="0" src="/public/icons/subjects.svg">Предметы</option>
+                                <option id="0" src="/agimnMirror/icons/subjects.svg">Предметы</option>
+                                <option id="1" src="/agimnMirror/icons/Математика.svg">Математика</option>
+                                <option id="2" src="/agimnMirror/icons/Русский.svg">Русский</option>
+                                <option id="3" src="/agimnMirror/icons/Литература.svg">Литература</option>
+                                <option id="4" src="/agimnMirror/icons/Английский.svg">Английский</option>
+                                <option id="5" src="/agimnMirror/icons/Физика.svg">Физика</option>
+                                <option id="6" src="/agimnMirror/icons/Химия.svg">Химия</option>
+                                <option id="7" src="/agimnMirror/icons/История.svg">История</option>
+                                <option id="8" src="/agimnMirror/icons/Общество.svg">Общество</option>
+                                <option id="9" src="/agimnMirror/icons/География.svg">География</option>
+                                <option id="10" src="/agimnMirror/icons/Биология.svg">Биология</option>
+                                <option id="11" src="/agimnMirror/icons/Педагогика.svg">Педагогика</option>
+                                <option id="12" src="/agimnMirror/icons/Информатика.svg">Информатика</option>
+                                <option id="13" src="/agimnMirror/icons/Раб_с_текстом.svg">Раб с текстом</option>
+                                <option id="14" src="/agimnMirror/icons/ОБЗР.svg">ОБЗР</option>
+                                <option id="0" src="/agimnMirror/icons/subjects.svg">Предметы</option>
                             </select>
                         </div>
                         <input type="date" class="date date-choose DATE">
                         <div class="custom-select taskm">
                             <select class="type" id="typef" title="Не важно" name="select">
-                                <option id="0" src="/public/icons/0.svg">Не важно</option>
-                                <option id="1" src="/public/icons/1.svg">Устно</option>
-                                <option id="2" src="/public/icons/2.svg">Письменно</option>
-                                <option id="3" src="/public/icons/3.svg">Уст. пис.</option>
-                                <option id="0" src="/public/icons/0.svg">Не важно</option>
+                                <option id="0" src="/agimnMirror/icons/0.svg">Не важно</option>
+                                <option id="1" src="/agimnMirror/icons/1.svg">Устно</option>
+                                <option id="2" src="/agimnMirror/icons/2.svg">Письменно</option>
+                                <option id="3" src="/agimnMirror/icons/3.svg">Уст. пис.</option>
+                                <option id="0" src="/agimnMirror/icons/0.svg">Не важно</option>
                             </select>
                         </div>
                     </div>
@@ -164,15 +164,15 @@ export function renderTaskManager(login){
             if ((task.id === id || id === 0) 
                 & (task.date === date || !date & task.dateId !== 0)
                 & (task.typeId === type || type === 0)){
-                Taskicon = `<div class="task-icon task-${task.name} ${task.name}" style="mask-image: url(/public/icons/${task.name}.svg);"></div>`
-                Typeicon = `<div class="type-icon task-${task.typeId} type-${task.typeId}" style="mask-image: url(/public/icons/${task.typeId}.svg);"></div>`
+                Taskicon = `<div class="task-icon task-${task.name} ${task.name}" style="mask-image: url(/agimnMirror/icons/${task.name}.svg);"></div>`
+                Typeicon = `<div class="type-icon task-${task.typeId} type-${task.typeId}" style="mask-image: url(/agimnMirror/icons/${task.typeId}.svg);"></div>`
                 if((task.dateId != 0) & ((login == task.author) || (login == "swerdash"))){
                     const html = `<div id="item${index}" class="task-item  TAS">
                     <div class="task-top">
                         <div class="task-name TES TEX">${Taskicon}${task.name.replaceAll('_', ' ')}</div>
                         <div id="top${index}" class="editTools">
-                            <img title="Удалить" src="/public/icons/delete_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" class="delete" id="${task.index}">
-                            <img title="Редактировать" class="editT editT${index}" id="${index}" src="/public/icons/edit_note_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg">
+                            <img title="Удалить" src="/agimnMirror/icons/delete_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" class="delete" id="${task.index}">
+                            <img title="Редактировать" class="editT editT${index}" id="${index}" src="/agimnMirror/icons/edit_note_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg">
                         </div>
                     </div>
                     <pre class="task task${task.index} TES TEX">${task.task}</pre>
@@ -226,7 +226,7 @@ function deleter(task, index){
 }
 
 function edit(task, index){
-    var buttons = `<img title="Отменить изменения" src="/public/icons/close_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" class="cancel" id="${index}"> <img title="Подтвердить изменения" src="/public/icons/check_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" class="conf${index} conf">`;
+    var buttons = `<img title="Отменить изменения" src="/agimnMirror/icons/close_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" class="cancel" id="${index}"> <img title="Подтвердить изменения" src="/agimnMirror/icons/check_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" class="conf${index} conf">`;
     if (document.querySelector(`.editT${index}`)){
         if (!(document.querySelector(`.editT${index}`).checked) && (document.querySelector(`.editT${index}`).getAttribute('listener') !== "true")){
             document.querySelector(`.editT${index}`).setAttribute('listener', true);
@@ -242,7 +242,7 @@ function edit(task, index){
                 document.getElementById(`item${index}`).innerHTML = document.getElementById(`item${index}`).innerHTML.replace(`<pre class="task task${task.index} TES TEX">${task.task}</pre>`, `<textarea class="inser ins${index}"></textarea>`)
                 document.getElementById(`item${index}`).innerHTML = document.getElementById(`item${index}`).innerHTML.replace(`<pre class="task task${task.index} TES TEX"></pre>`, `<textarea class="inser ins${index}"></textarea>`)
                 document.getElementById(`item${index}`).innerHTML = document.getElementById(`item${index}`).innerHTML.replace(`<div class="task-date TES TEX">${task.date}</div>`, `<input class="datechanger dater${index}" type="date">`)
-                document.getElementById(`item${index}`).innerHTML = document.getElementById(`item${index}`).innerHTML.replace(`<div class="task-type TES TEX"><div class="type-icon task-${task.typeId} type-${task.typeId}" style="mask-image: url(/public/icons/${task.typeId}.svg);"></div>${task.type}</div>`, t);
+                document.getElementById(`item${index}`).innerHTML = document.getElementById(`item${index}`).innerHTML.replace(`<div class="task-type TES TEX"><div class="type-icon task-${task.typeId} type-${task.typeId}" style="mask-image: url(/agimnMirror/icons/${task.typeId}.svg);"></div>${task.type}</div>`, t);
                 document.getElementById(`top${index}`).innerHTML += buttons
                 document.querySelector(`.ins${index}`).value = tasks.at(index).task;
                 document.querySelector(`.dater${index}`).value = tasks.at(index).date;
@@ -300,7 +300,7 @@ function showCurr(task, index, buttons){
                         </select>`;
     document.getElementById(`item${index}`).innerHTML = document.getElementById(`item${index}`).innerHTML.replace(`<textarea class="inser ins${index}"></textarea>`, `<pre class="task task${task.index} TES TEX">${task.task}</pre>`)
     document.getElementById(`item${index}`).innerHTML = document.getElementById(`item${index}`).innerHTML.replace(`<input class="datechanger dater${index}" type="date">`, `<div class="task-date TES TEX">${task.date}</div>`)
-    document.getElementById(`item${index}`).innerHTML = document.getElementById(`item${index}`).innerHTML.replace(t, `<div class="task-type TES TEX"><div class="type-icon task-${task.typeId} type-${task.typeId}" style="mask-image: url(/public/icons/${task.typeId}.svg);"></div>${task.type}</div>`)
+    document.getElementById(`item${index}`).innerHTML = document.getElementById(`item${index}`).innerHTML.replace(t, `<div class="task-type TES TEX"><div class="type-icon task-${task.typeId} type-${task.typeId}" style="mask-image: url(/agimnMirror/icons/${task.typeId}.svg);"></div>${task.type}</div>`)
     document.getElementById(`item${index}`).innerHTML = document.getElementById(`item${index}`).innerHTML.replace(buttons, '');
     document.querySelector(`.editT${index}`).checked = 0;
     expandimages(task, index);
