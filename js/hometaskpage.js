@@ -25,12 +25,12 @@ export var elements = {
 document.querySelector('.settings').addEventListener('click', () => {
     if(!document.querySelector('.settingsContainer')){
         OpenSettings();
-        document.querySelector('.settingsImg').setAttribute('src', "/public/icons/check_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg");
+        document.querySelector('.settingsImg').setAttribute('src', "/agimnMirror/icons/check_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg");
         document.querySelector('.settings').setAttribute('style', "border-color:yellow");
     }
     else{
         CloseSettings();
-        document.querySelector('.settingsImg').setAttribute('src', "/public/icons/settings.svg");
+        document.querySelector('.settingsImg').setAttribute('src', "/agimnMirror/icons/settings.svg");
         document.querySelector('.settings').setAttribute('style', "");
     }
 });
@@ -44,7 +44,7 @@ function OpenSettings(){
     <div class="settingsGroup groupTypeIcons"></div>
     <div class="settingsGroup groupOther"></div>
     <div class="settingsGroup groupText"></div>
-    <div class="resetButton"><img class="settingsImg" src="/public/icons/reset.svg"></div>`; 
+    <div class="resetButton"><img class="settingsImg" src="/agimnMirror/icons/reset.svg"></div>`; 
     document.querySelector('.resetButton').addEventListener('click', () => {
         elements.name.forEach((name) => {Reset(name, rgbToHex(255, 255, 255), false)});
         elements.Tasktype.forEach((Tasktype) => {Reset(Tasktype, rgbToHex(255, 255, 255), false)});
@@ -56,11 +56,11 @@ function OpenSettings(){
     var otherGroup = document.querySelector('.groupOther');
     var textGroup = document.querySelector('.groupText');
     elements.name.forEach((name) => {
-        subjGroup.innerHTML += `<div class="icon-settings"><div class="task-icon task-${name} ${name}" style="mask-image: url(/public/icons/${name}.svg);"></div><input type="color" class="customColor color${name}"></div>`;
+        subjGroup.innerHTML += `<div class="icon-settings"><div class="task-icon task-${name} ${name}" style="mask-image: url(/agimnMirror/icons/${name}.svg);"></div><input type="color" class="customColor color${name}"></div>`;
     });
     elements.name.forEach((name) => {Colors(name, false);});
     elements.Tasktype.forEach((Tasktype, index) => {
-        typeGroup.innerHTML += `<div class="icon-settings"><div class="type-icon task-${index + 1} ${Tasktype}" style="mask-image: url(/public/icons/${index+1}.svg);"></div><input type="color" class="customColor color${Tasktype}"></div>`;
+        typeGroup.innerHTML += `<div class="icon-settings"><div class="type-icon task-${index + 1} ${Tasktype}" style="mask-image: url(/agimnMirror/icons/${index+1}.svg);"></div><input type="color" class="customColor color${Tasktype}"></div>`;
     });
     elements.Tasktype.forEach((Tasktype) => {Colors(Tasktype, false)});
     elements.other.forEach((other) => {
