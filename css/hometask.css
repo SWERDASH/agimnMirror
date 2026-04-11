@@ -424,7 +424,7 @@ html{
 }
 
 .loading{
-    mask-image: url(/public/icons/loading.gif);
+    mask-image: url(/agimnMirror/icons/loading.gif);
     mask-repeat: no-repeat;
     mask-size: contain;
     width: 50px;
@@ -433,7 +433,7 @@ html{
 }
 
 .error{
-    mask-image: url(/public/icons/add_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg);
+    mask-image: url(/agimnMirror/icons/add_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg);
     mask-repeat: no-repeat;
     mask-size: contain;
     rotate: 45deg;
@@ -443,35 +443,35 @@ html{
 }
 
 .task-HWFR{
-    mask-image: url(/public/icons/HWFR.svg);
+    mask-image: url(/agimnMirror/icons/HWFR.svg);
 }
 
 .task-BG{
-    mask-image: url(/public/icons/BG.svg);
+    mask-image: url(/agimnMirror/icons/BG.svg);
 }
 
 .task-DATE{
-    mask-image: url(/public/icons/DATE.svg);
+    mask-image: url(/agimnMirror/icons/DATE.svg);
 }
 
 .task-FEB{
-    mask-image: url(/public/icons/FEB.svg);
+    mask-image: url(/agimnMirror/icons/FEB.svg);
 }
 
 .task-TES{
-    mask-image: url(/public/icons/TES.svg);
+    mask-image: url(/agimnMirror/icons/TES.svg);
 }
 
 .task-TAS{
-    mask-image: url(/public/icons/TAS.svg);
+    mask-image: url(/agimnMirror/icons/TAS.svg);
 }
 
 .task-TEX{
-    mask-image: url(/public/icons/TEX.svg);
+    mask-image: url(/agimnMirror/icons/TEX.svg);
 }
 
 .task-e{
-    mask-image: url(/public/icons/e.svg);
+    mask-image: url(/agimnMirror/icons/e.svg);
 }
 .task-e:hover{
     cursor: default;
