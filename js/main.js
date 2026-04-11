@@ -10,7 +10,7 @@ if(document.querySelector(".themeSwitch")){
 
 if (document.querySelector('.mainBack')){
 document.querySelector('.mainBack').addEventListener('click', () => {
-        open("/homepage.html", "_top");
+        open("/agimnMirror/homepage.html", "_top");
     });
 };
 
@@ -22,13 +22,13 @@ if (document.querySelector('.daily')){
 
 if (document.querySelector('.ht')){
     document.querySelector('.ht').addEventListener('click', () => {
-        open("/hometask.html", "_top");
+        open("/agimnMirror/hometask.html", "_top");
     });
 };
 
 if (document.querySelector('.news-page')){
     document.querySelector('.news-page').addEventListener('click', () => {
-        open("/news.html", "_top");
+        open("/agimnMirror/news.html", "_top");
     });
 };
   
