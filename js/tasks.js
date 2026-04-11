@@ -158,12 +158,12 @@ export function addTask(){
     }
 }
 var reactionsAvaible = [
-    "/public/reactions/oh.png",
-    "/public/reactions/aga.png",
-    "/public/reactions/buh.gif",
-    "/public/reactions/catkiss.gif",
-    "/public/reactions/NOOOO.gif",
-    "/public/reactions/taah.gif",
+    "/agimnMirror/reactions/oh.png",
+    "/agimnMirror/reactions/aga.png",
+    "/agimnMirror/reactions/buh.gif",
+    "/agimnMirror/reactions/catkiss.gif",
+    "/agimnMirror/reactions/NOOOO.gif",
+    "/agimnMirror/reactions/taah.gif",
     "https://cdn.7tv.app/emote/01FFWH9WV80000JT8GHDKHJNZC/4x.gif",
     "https://cdn.7tv.app/emote/01HMMNVPF80000JD9H290NVA3C/4x.gif",
     "https://cdn.7tv.app/emote/01G9TPSGDG000AGTWTH4BHTCTY/4x.gif",
@@ -193,22 +193,22 @@ export function renderTasks(){
                 }
             });
         }
-        Taskicon = `<div class="task-icon task-${task.name} ${task.name}" style="mask-image: url(/public/icons/${task.name}.svg);"></div>`
-        Typeicon = `<div class="type-icon task-${task.typeId} type-${task.typeId}" style="mask-image: url(/public/icons/${task.typeId}.svg);"></div>`
+        Taskicon = `<div class="task-icon task-${task.name} ${task.name}" style="mask-image: url(/agimnMirror/icons/${task.name}.svg);"></div>`
+        Typeicon = `<div class="type-icon task-${task.typeId} type-${task.typeId}" style="mask-image: url(/agimnMirror/icons/${task.typeId}.svg);"></div>`
         if ((task.id === id || id === 0) 
         & (task.date === date || !date & task.dateId !== 0)
         & (task.typeId === type || type === 0)){
             outputHTML += `<div class="task-item TAS ${task.author} taskID${task.index}" id='task-item${index}' >
                         <div class="task-top">
                             <div class="task-name TES TEX">${Taskicon}${task.name.replaceAll('_', ' ')}</div>
-                            <div class="reactB" id="reactB${index}" style="mask-image: url(/public/icons/react.svg);"></div>
+                            <div class="reactB" id="reactB${index}" style="mask-image: url(/agimnMirror/icons/react.svg);"></div>
                         </div>
                         <pre class="task TES TEX">${task.task}</pre>
                         <div class="task-bottom">
                             <div class="task-date TES TEX">${task.date}</div>
                             <div class="task-type TES TEX">${Typeicon}${task.type}</div>
                             <input class="task-check" type="checkbox" id="${task.index}">
-                            <div class="copy" id="copy${task.index}" style="mask-image: url(/public/icons/copy.svg);"></div>
+                            <div class="copy" id="copy${task.index}" style="mask-image: url(/agimnMirror/icons/copy.svg);"></div>
                         </div>
                         <div class="reaction-space">${reactioned}</div>
                             </div>`;
