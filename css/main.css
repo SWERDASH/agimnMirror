@@ -1,0 +1,858 @@
+body{
+    overflow:none;
+    margin: 0;
+    padding: 0;
+    background-image: url("../photos/bg.png");
+}
+
+.newsFrame{
+    background-color: rgb(102, 102, 102);
+    border-radius: 10px;
+    width: 60%;
+    height: auto;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 100px;
+    z-index: 0;
+}
+
+.newsCreate{
+    background-color: rgb(37, 37, 37);
+    border-radius: 10px;
+    width: 60%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    color: white;
+    margin-top: 100px;
+}
+
+.properties{
+    display: flex;
+}
+
+.author, .passw{
+    border-radius: 10px;
+    margin: 5px;
+    border: none;
+    font-size: 15px;
+}
+
+.news-images-added{
+    align-self: center;
+    justify-content: center;
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.add-image{
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 300px;
+}
+
+.upload-image{
+    align-self: center;
+    margin: 10px;
+    width: 120px;
+}
+
+.news-text-input{
+    align-self: center;
+    text-align: center;
+    margin: 10px;
+    height: 200px;
+    resize: none;
+    border-radius: 20px;
+}
+
+.news-date-input{
+    align-self: flex-end;
+    margin: 10px;
+}
+
+.news{
+    margin: 20px;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+}
+
+.trash{
+    position: relative;
+    height: 200px;
+    opacity: 0;
+    margin-left: -200px;
+    z-index: 0;
+}
+
+.editing .trash{
+    z-index: 2;
+    transition: all 0.15s;
+}
+
+.editing .trash:hover{
+    opacity: 1;
+    background-color: rgba(255, 0, 0, 0.1);
+}
+
+.news-item{
+    background-color: rgb(37, 37, 37);
+    position: relative;
+    border-radius: 20px;
+    border: none;
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.news-images{
+    align-self: center;
+    align-content: center;
+    justify-content: center;
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap:5px;
+}
+
+.theme-inv .news-image{
+    filter: invert();
+}
+
+.news-image{
+    object-fit: cover;
+    width: 200px;
+    position: relative;
+    z-index: 1;
+}
+
+.news-text, .news-author{
+    align-self: flex-start;
+    margin: 10px;
+    line-break: anywhere;
+    font-size: 100%;
+}
+.news-date{
+    align-self: flex-end;
+    margin: 10px;
+}
+
+.main-buttons{
+    position:absolute;
+    display: flex;
+    justify-content:center;
+    gap: 5px;
+    align-items: center;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+
+.edit{
+    z-index: 0;
+    display: flex;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.static{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    left: 0;
+}
+
+@media (max-width: 300px){
+    .main-buttons{
+        gap: 5px;
+    }
+    .static .button{
+        font-size: 15px;
+    }
+}
+@media (max-width: 400px) {
+    .main-buttons{
+        flex-direction: column;
+    }
+    .static .button{
+        font-size: 15px;
+    }
+    @media (max-height: 400px) {
+    .static{
+        flex-direction: row;
+    }
+}
+}
+@media (max-width: 500px) {
+    .main-buttons{
+        flex-direction: column;
+    }
+}
+@media (max-width: 810px) {
+    .main-buttons{
+        flex-direction: column;
+    }
+    .edit{
+        justify-content: space-around;
+    }
+}
+
+
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+}
+
+.static{
+    position: fixed;
+    z-index: 100;
+    bottom: 5px;
+}
+
+html{
+    filter: invert(0);
+    transition: filter 0.2s;
+}
+.theme-inv{
+    filter: invert();
+}
+
+.htb{
+    top: 15px;
+}
+
+.icon{
+    width: 45px;
+    opacity: 0;
+}
+
+/*hometask page elements*/
+
+.taskpage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.frame{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 20px;
+    gap: 5px;
+    border-radius: 20px;
+    background: rgb(99, 99, 99);
+}
+
+.filter{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+}
+
+.custom-select {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    user-select: none;
+    position: relative;
+}
+
+.custom-select select {
+    display: none;
+}
+
+.select-selected {
+    background-color: rgb(204, 204, 204);
+    border-radius: 20px;
+    width: 100px;
+    transition: all 0.1s ease-out;
+    display: flex;
+    justify-content: center;
+}
+
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #000000 transparent transparent transparent;
+}
+
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent #000000 transparent;
+    top: 7px;
+}
+.select-selected.select-arrow-active{
+    border-radius: 20px 20px 0 0;
+}
+
+.select-items div,.select-selected {
+    color: #000000;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+}
+
+.select-items {
+    background-color: rgb(204, 204, 204);
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    border-radius: 0 0 20px 20px;
+    transition: all 0.15s;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+    filter: brightness(0.1);
+}
+.selected{
+    border-radius: 20px 20px 0 0;
+    z-index: 20;
+}
+
+.task-item, .deleted-task{
+    background-color: rgb(37, 37, 37);
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 20px;
+    width: 1000px;
+    transition: all 0.2s;
+}
+
+.task-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    margin: 5px;
+    margin-bottom: 15px;
+}
+
+.task-bottom{
+    display: flex;
+    margin: 5px;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+}
+
+.task-name{
+    font-size: 30px;
+    position: relative;
+    background-color: rgb(0, 0, 0);
+    display: inline;
+    padding: 5px;
+    align-self: center;
+    border-radius: 20px;
+}
+.task{
+    font-size: 20px;
+    background-color: rgb(0, 0, 0);
+    display:block;
+    word-break: keep-all;
+    position: relative;
+    padding: 5px 10px 5px 10px;
+    border-radius: 20px;
+    margin: -5px 5px 5px 5px;
+    white-space: pre-wrap;
+}
+.task-date{
+    display: inline-block;
+    background-color: black;
+    position: relative;
+    padding: 5px;
+    border-radius: 20px;
+}
+.task-type{
+    display: inline-block;
+    background-color: black;
+    position: relative;
+    padding: 5px;
+    border-radius: 20px;
+}
+.task-author{
+    display: inline-block;
+    background-color: black;
+    position: relative;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.homework{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+    gap: 10px;
+}
+
+.pass{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: gray;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.text-input{
+    border-style: none;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 20px;
+    margin: 10px;
+    display: block;
+    color: black;
+}
+.text-input::placeholder{
+    color: black;
+}
+.loginNow{
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: gray;
+    position: fixed;
+    left: 0;
+    bottom: 10px;
+    padding: 5px;
+    border-radius: 0px 20px 20px 0px;
+    font-size: 30px;
+    font-variant: small-caps;
+    user-select: none;
+    z-index: 99;
+}
+.taskframe{
+    width: 410px;
+    height: 410px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: static;
+    align-self: baseline;
+}
+
+.text{
+    height: 200px;
+    resize: none;
+}
+.tskm{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.tskm-selected{
+    width: 103px;
+}
+
+.custom-tskm{
+    width: 137px;
+}
+
+.date{
+    background-color: rgb(204, 204, 204);
+    border: none;
+    border-radius: 20px;
+    color: rgb(0, 0, 0);
+    padding: 12px 16px;
+    margin: 0px 5px;
+}
+
+.date-tskm{
+    width: 105px;
+    margin: 2px;
+}
+
+.taskmanager{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: gray;
+}
+
+.page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.inser{
+    background-color: gray;
+    border: none;
+    border-radius: 20px;
+    margin: -5px 5px 5px 5px;
+    width: 90%;
+    height: 150px;
+    padding: 5px;
+    font-size: 20px;
+    color: white;
+    resize: none;
+}
+
+.editTools{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+.editNews{
+    display: flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+.chos{
+    box-shadow: 0px 0px 20px rgb(255, 208, 0);
+}
+.chos:has(.conf:hover){
+    box-shadow: 0px 0px 20px rgb(0, 192, 0);
+}
+.chos:has(.cancel:hover){
+    box-shadow: 0px 0px 20px red;
+}
+.task-item:has(.editT:hover){
+    box-shadow: 0px 0px 20px rgb(0, 183, 255);
+}
+.task-item:has(.delete:hover){
+    box-shadow: 0px 0px 20px rgb(255, 0, 0);
+    color: red;
+    color-scheme: red;
+}
+
+.theme-inv .chos{
+    box-shadow: 0px 0px 20px rgb(0, 47, 255);
+}
+.theme-inv .chos:has(.conf:hover){
+    box-shadow: 0px 0px 20px rgb(255, 63, 255);
+}
+.theme-inv .chos:has(.cancel:hover){
+    box-shadow: 0px 0px 20px rgb(0, 255, 255);
+}
+.theme-inv .task-item:has(.editT:hover){
+    box-shadow: 0px 0px 20px rgb(255, 72, 0);
+}
+.theme-inv .task-item:has(.delete:hover){
+    box-shadow: 0px 0px 20px rgb(0, 255, 255);
+    color: rgb(0, 255, 255);
+    color-scheme: rgb(0, 255, 255);
+}
+.e{
+    color: coral;
+    text-decoration: none;
+    transition: all 0.2s;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    height: fit-content;
+    width: fit-content;
+}
+.e:hover{
+    color: rgba(255, 127, 80, 0.856);
+    text-decoration: underline;
+}
+
+.expanded-image{
+    position: fixed;
+    z-index: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100%;
+    transition: all 0.15s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+.expands{
+    background-color: rgba(0, 0, 0, 0.274);
+    z-index: 1000;
+    cursor: pointer;
+}
+.ExpI{
+    z-index: 1001;
+    width: 40%;
+    box-shadow: 0px 0px 40px rgb(104, 104, 104);
+    transition: all 0.2s;
+}
+.theme-inv .ExpI{
+    filter: invert();
+}
+
+@media (max-width: 1000px) {
+    .news-image{
+        width: 40%;
+        align-self: center;
+    }
+    .news-images{
+        gap:5px;
+        width: 100%;
+    }
+    .news-item{
+        width: 100%;
+    }
+    .newsFrame{
+        width: 90%;
+    }
+    .newsCreate{
+        width: 90%;
+    }
+    .news{
+        width: 100%;
+    }
+    .homework{
+        width: 70%;
+    }
+    .frame{
+        width: 50%;
+        top: 15px;
+        position: relative;
+    }
+    .task-item, .deleted-task{
+        width: 100%;
+        padding: 2px;
+    }
+    .filter{
+        margin-top: 2px;
+        width: 50%;
+        z-index: 20;
+    }
+    .buttons{
+        position: relative;
+        top: 5px;
+    }
+    .static .button{
+        font-size: 20px;
+    }
+    .static{
+        position: relative;
+        display: flex;
+        gap: 10px;
+        top: 3px;
+        justify-content: center;
+        align-items: center;
+        align-self: flex-end;
+    }
+    @media (max-height: 400px) {
+        .static{
+            flex-direction: row;
+            position: absolute;
+            justify-content: space-evenly;
+            margin-right: 15px;
+        }
+        .static .button{
+            font-size: 20px;
+            height: 30px;
+        }
+    }
+    .task{
+        font-size: 90%;
+    }
+    .inser{
+        font-size: 90%;
+        width: 90%;
+    }
+    .task-date{
+        font-size: 80%;
+    }
+    .task-type{
+        font-size: 80%;
+    }
+    .task-author{
+        font-size: 80%;
+    }
+    .task-name{
+        font-size: 100%;
+    }
+    .editTools{
+        display: grid;
+        grid-template-columns: 1.1fr 1fr;
+        row-gap: 10px;
+    }
+    .editNews{
+        display: flex;
+        justify-content: center;
+        row-gap: 5px;
+    }
+    .ExpI{
+        width: 80%;
+    }
+}
+@media (max-width: 600px){
+    .editNews{
+        display: flex;
+        justify-content: center;
+        row-gap: 5px;
+    }
+    .datechanger{
+        width: 35%;
+    }
+    .typer{
+        width: 100%;
+    }
+    .buttons{
+        position: relative;
+        top: 5px;
+    }
+    .static .button{
+        font-size: 10px;
+    }
+    .static{
+        position: relative;
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 5px;
+        justify-content: center;
+        align-items: center;
+        top: 10px;
+    }
+    @media (max-height: 400px) {
+        .static{
+            flex-direction: row;
+            position: absolute;
+            justify-content: space-evenly;
+            margin-right: 15px;
+        }
+        .static .button{
+            font-size: 10px;
+            height: 30px;
+        }
+    }
+    .edit{
+        align-items: center;
+        justify-content: space-around;
+        align-self: center;
+        flex-direction: row;
+        left: 0;
+        right: 0;
+    }
+    .frame{
+        position: relative;
+        width: 80%;
+        top: 15px;
+        padding: 2px 5px;
+    }
+    .filter{
+        position: relative;
+        flex-direction: column;
+        top:2px;
+        z-index: 20;
+    }
+    .task-item, .deleted-task{
+        width: 120%;
+        padding: 2px 4px;
+    }
+    .taskm{
+        width: 50%;
+    }
+    .date{
+        width: 44%;
+        margin: 2px;
+        margin-left: 1.5%;
+    }
+    .select-selected{
+        align-items: center;
+        width: 60px;
+        height: 21px;
+        font-size: 14px;
+    }
+    .select-items{
+        width: 94px;
+        font-size: 14px;
+    }
+    .tskm-items{
+        width: 108.15px;
+    }
+    .page{
+        flex-direction: column;
+        position: relative;
+        top: 20px;
+    }
+    .taskframe{
+        width: 80%;
+        flex-direction: column;
+        align-self: center;
+        z-index: 0;
+    }
+    .taskpage{
+        height: 100%;
+        width: 100%;
+    }
+    .tskm-selected{
+        width: 74.15px;
+    }
+    .custom-tskm, .taskm{
+        width: 108.15px;
+    }
+    .date-tskm{
+        width: 44%;
+        margin: 2px;
+        margin-left: 1.5%;
+    }
+    .loginNow{
+        bottom: 10px;
+        font-size: 20px;
+        opacity: 0.7;
+    }
+    .text{
+        width: 90%;
+    }
+    .taskmanager{
+        margin-top: 60px;
+        margin-bottom: 10px;
+        width: 90%;
+        padding: 20px 0px;
+        z-index: 0;
+    }
+}

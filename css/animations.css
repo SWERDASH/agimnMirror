@@ -1,0 +1,129 @@
+.button{
+    animation: buttons 0.5s ease-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+.inser{
+    animation: appear 0.5s ease-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+.conf{
+    animation: editor 0.4s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+.cancel{
+    animation: editors 0.4s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+.deleted-task{
+    animation: deleted 0.4s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes deleted {
+    0%{
+        opacity: 1;
+    }
+    80%{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+}
+
+.ExpI{
+    animation: epx 0.15s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes epx {
+    0%{
+        opacity: 0;
+    }
+}
+
+@keyframes editor {
+    0%{
+        margin-top: -100px;
+        opacity: 0;
+    }
+    30%{
+        margin-top: 5px;
+        opacity: 1;
+    }
+}
+@keyframes editors {
+    0%{
+        margin-top: -150px;
+        opacity: 0;
+    }
+    30%{
+        margin-top: 5px;
+        opacity: 1;
+    }
+}
+
+@keyframes appear {
+    0%{
+        width: 0px;
+        height: 20px;
+    }
+    80%{
+        width: 91%;
+    }
+}
+
+@keyframes buttons {
+    0%{
+        margin: 0 300px;
+        opacity: 0;
+        filter:blur(10px);
+    }
+    50%{
+        margin: 0 -10px;
+        opacity: 0.01;
+    }
+}
+
+.frame, .taskmanager{
+    animation: buttons 0.75s ease-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+.icon{
+    animation: icon 0.2s ease-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-delay: 0.35s;
+}
+@keyframes icon {
+    0%{
+        opacity: 0;
+        bottom:-10px;
+    }
+    50%{
+        bottom: 0px;
+    }
+    100%{
+        opacity: 1;
+        bottom: -8px;
+    }
+}
+.editt{
+    animation: edit 0.25s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+@keyframes edit {
+    0%{
+        gap: 0;
+        opacity: 0;
+    }
+}

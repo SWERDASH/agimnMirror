@@ -1,0 +1,86 @@
+.texting{
+    animation: infinite rotating 20s linear;
+    animation-fill-mode: forwards;
+    transition: all 0.3s;
+}
+.review-texting{
+    animation: infinite rotating 20s linear;
+    animation-fill-mode: forwards;
+}
+
+.daily .texting{
+    animation-delay: -0.1s;
+    animation-direction: reverse;
+}
+
+.news-page .texting{
+    animation-delay: -0.5s;
+}
+
+.icon{
+    animation: 1 appears 0.5s ease-out;
+    animation-fill-mode: forwards;
+}
+
+.daily .icon{
+    animation-delay: 0.1s;
+}
+
+.news-page .icon{
+    animation-delay: 0.1s;
+}
+
+.settingsContainer{
+    animation: 1 settings 0.3s ease-out;
+    animation-fill-mode: forwards;
+}
+
+.settingsContainerRemove{
+    animation: 1 removes 0.5s ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes settings {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes removes {
+    100%{
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes appears {
+    0%{
+        bottom: -500px;
+        opacity: 0;
+    }
+}
+
+@keyframes rotating {
+    0%{
+        rotate: 360deg;
+    }
+}
+
+.excursionFog{
+    animation: 1 fogs 0.3s ease-out;
+    animation-fill-mode: forwards;
+}
+
+.excursion-text{
+    animation: 1 fogs 0.5s ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fogs {
+    0%{
+        opacity: 0;
+    }
+}

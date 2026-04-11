@@ -1,0 +1,226 @@
+body{
+    background-image: url(/public/photos/bg.png);
+    display: flex;
+    margin: 0;
+    padding: 0;
+    overflow: none;
+}
+.theme-inv{
+    filter: invert();
+}
+
+html{
+    transition: all 0.5s;
+    display: flex;
+}
+
+.upperButtons{
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 1;
+}
+
+.review-item{
+    padding: 20px;
+    border: white solid 2px;
+    border-radius: 2px;
+    background-color: rgb(37, 37, 37);
+    border-radius: 20px;
+    width: 500px;
+    height: 100px;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.review-text, .review-author, .review-rate{
+    border-radius: 10px;
+    height: fit-content;
+    width: fit-content;
+    padding: 2px;
+    background-color: white;
+    display: flex;
+}
+
+.review-page{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.review{
+    background-color: rgb(39, 39, 39);
+    width: 50%;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    border: white 2px solid;
+    height: 300px;
+    padding: 10px;
+}
+
+.rate{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    gap: 5px;
+    width: 50%;
+}
+.Comment-and-submit{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    gap: 10px;
+    align-items: end;
+    justify-content: center;
+    margin: 20px;
+}
+
+.reviewRateBox{
+    width: 100%;
+    display: flex;
+    gap: 2px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin: 5px;
+}
+
+.bottomComment{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.addButton{
+    background-color: black;
+    padding: 5px;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    border: white 2px solid;
+    border-radius: 20px;
+    transition: all 0.15s;
+}
+
+.addButton:hover{
+    padding: 6px;
+}
+.addButton:active{
+    padding: 4px;
+}
+
+.User-data{
+    border: black 2px solid;
+    border-radius: 20px;
+}
+
+p{
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    align-self: self-start;
+}
+
+.value{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    height: 30px;
+}
+
+.reviewComment{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-self: self-start;
+    position: relative;
+    resize: none;
+    border-radius: 20px;
+    border: black solid 2px;
+}
+
+.icon{
+    width: 30px;
+    align-self: start;
+}
+.star{
+    width: 30px;
+    align-self: center;
+    user-select: none;
+    transition: all 0.15s;
+}
+
+.star-unsel{
+    filter: brightness(0) saturate(100%) invert(99%) sepia(46%) saturate(2047%) hue-rotate(353deg) brightness(33%) contrast(84%);
+}
+
+.star-sel{
+    filter: brightness(0) saturate(100%) invert(99%) sepia(46%) saturate(2047%) hue-rotate(353deg) brightness(103%) contrast(84%);
+}
+.star-selected{
+    filter: brightness(0) saturate(100%) invert(99%) sepia(46%) saturate(2047%) hue-rotate(353deg) brightness(103%) contrast(84%);
+}
+
+.total{
+    color: white;
+    font-size: 200%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+.settingsImg, .themeImg, .homeImg{
+    width: 70px;
+}
+
+.settings, .themeSwitch, .mainBack{
+    background-color: rgb(39, 39, 39);
+    width: 70px;
+    height: 70px;
+    padding: 2px;
+    border-color: white;
+    border-style: solid;
+    border-radius: 19px;
+    margin: 5px;
+    transition: all 0.15s;
+    z-index: 2;
+}
+
+.settings:hover, .themeSwitch:hover, .mainBack:hover{
+    padding: 3px;
+    cursor: pointer;
+}
+
+.settings:active, .themeSwitch:active, .mainBack:active{
+    padding: 1px;
+}
+
+@media (max-width: 600px) {
+    .review{
+        flex-direction: column;
+        width: 90%;
+        height: 90%;
+    }
+    .reviews2{
+        display: none;
+    }
+    .settings, .themeSwitch, .settingsImg, .themeImg, .mainBack, .homeImg, .resetButton{
+        width: 40px;
+        height: 40px;
+    }
+}

@@ -1,0 +1,391 @@
+.button{
+    background: rgba(255, 255, 255, 0.7);
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    display: flex;
+    margin: 5px;
+    font-size: 50px;
+    height: 60px;
+    user-select: none;
+    transition: padding 0.15s, background-color 0.15s, box-shadow 0.15s;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    z-index: 3;
+    color: black;
+    text-decoration: none;
+}
+
+.imageConvert{
+    font-size: 20px;
+    height: 35px;
+    position: relative;
+    top: 5px;
+    color: black;
+    text-decoration: none;
+}
+
+.ht{
+    width: 223px;
+}
+
+.news-page{
+    width: 223px;
+}
+
+.daily{
+    align-items: center;
+}
+
+.reset{
+    width: 50px;
+    height: 50px;
+    margin-top: 240px;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    display: flex;
+    font-size: 50px;
+    transition: padding 0.15s, background-color 0.15s, box-shadow 0.15s;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: absolute;
+}
+.resetImg{
+    width: 40px;
+}
+
+.editMainButtons, .editMainText{
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-style: none;
+    transition: all 0.15s;
+    position: relative;
+}
+
+.button:hover, .editMainButtons:hover, .editMainText:hover, .reset:hover{
+    background: rgb(209, 175, 226);
+    box-shadow: 0px 0px 15px rgba(235, 198, 255, 0.747);
+    padding: 6px;
+    cursor: pointer;
+}
+.button:active, .editMainButtons:active, .editMainText:active, .reset:active{
+    padding: 7px;
+}
+
+.editNews .cancelNews, .confNews{
+    margin: 10px;
+}
+
+.themeSwitch{
+    z-index: 2000;
+    top: 3px;
+    right: 3px;
+    align-self:flex-start;
+    background-color: rgb(22, 22, 22);
+    padding: 4px;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    border-style:solid;
+    border-width: 2px;
+    border-color: azure;
+    position: fixed;
+    transition: padding 0.15s ease-out, opacity 0.15s;
+}
+.themeSwitch:hover{
+    padding: 5px;
+}
+.themeSwitch:active{
+    padding: 3px;
+    opacity: 0.9;
+}
+
+.themeImg{
+    filter: invert(1);
+    width: 60px;
+}
+
+.mainBack{
+    background-color: rgb(22, 22, 22);
+    padding: 4px;
+    width: 60px;
+    height: 60px;
+    left: 3px;
+    top: 3px;
+    border-radius: 10px;
+    border-style:solid;
+    border-width: 2px;
+    border-color: azure;
+    position: fixed;
+    z-index: 1;
+    transition: padding 0.15s ease-out, opacity 0.15s;
+}
+
+.mainBack:hover{
+    padding: 3px;
+}
+.mainBack:active{
+    padding: 1px;
+    opacity: 0.6;
+}
+
+.homeImg{
+    width: 60px;
+}
+
+.daily-off,
+.daily-off:hover,
+.daily-off:active{
+opacity: 0.8;
+cursor: default;
+}
+.addIMG{
+    align-self: center;
+    justify-content: center;
+}
+.addTask, .addNews, .addIMG{
+    color: black;
+    font-size: 30px;
+    text-align: center;
+    padding: 0px 2px 3px 2px;
+    height:25px;
+    width:25px;
+    border-radius: 10px;
+    transition: all 0.1s;
+}
+.addTask:hover, .addNews:hover, .addIMG:hover{
+    padding: 3px 5px 6px 5px;
+}
+
+.addTask:active, .addNews:active, .addIMG:active{
+    padding: 0px 2px 3px 2px;
+}
+
+.ver{
+    background: rgba(255, 255, 255, 0.7);
+    padding: 5px;
+    text-align: center;
+    align-items: center;
+    width: 50px;
+    border-radius: 20px;
+    border-style: none;
+    display: block;
+    font-size: 20px;
+    height: 25px;
+    margin: 20px 100px 0 100px;
+    user-select: none;
+    transition: padding 0.15s, background-color 0.15s, box-shadow 0.15s;
+}
+.ver:hover{
+    background: rgb(209, 175, 226);
+    box-shadow: 0px 0px 15px rgba(235, 198, 255, 0.747);
+    padding: 6px;
+    cursor: pointer;
+}
+.ver:active{
+    padding: 7px;
+}
+
+.delete{
+    position: relative;
+    display: inline;
+    transition: all 0.15s;
+    background-color: rgb(165, 0, 55);
+    border-radius: 10px;
+    width: 40px; 
+    height: 40px;
+}
+.editT{
+    position: relative;
+    display: inline;
+    transition: all 0.15s;
+    background-color: rgb(0, 118, 165);
+    border-radius: 10px;
+    width: 40px; 
+    height: 40px;
+}
+.theme-inv .editT, .theme-inv .cancel, .theme-inv .delete, .theme-inv .conf{
+    filter: invert();
+}
+.editT, .cancel, .delete, .conf{
+    transition: all 0.15s;
+}
+
+.cancel{
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(165, 0, 0);
+    width: 40px;
+    height: 40px;
+}
+
+.conf{
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(0, 177, 29);
+    width: 40px;
+    height: 40px;
+}
+
+.editT:hover, .delete:hover, .conf:hover, .cancel:hover{
+    opacity: 0.8;
+    padding: 1px;
+}
+.editT:active, .delete:active, .conf:active, .cancel:active{
+    opacity: 0.7;
+    padding: 2px;
+}
+
+.authorConf, .passConf{
+    align-self: center;
+    width: 30px;
+    height: 30px;
+}
+
+.deletenews, .editnews{
+    margin: 10px;
+}
+
+@media (max-width: 810px) {
+    .reset{
+        position: relative;
+        margin: 0;
+        bottom: 0;
+    }
+}
+
+.noOpen.settings{
+    top: 3px;
+    left: 3px;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    padding: 2px;
+    background-color: rgb(22, 22, 22);
+    z-index: 1;
+    position: fixed;
+    border: white;
+    border-style: solid;
+    transition: all 0.15s;
+    z-index: 2000;
+}
+
+.open.settings{
+    top: 3px;
+    left: 3px;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    padding: 2px;
+    background-color: rgb(22, 22, 22);
+    z-index: 2000;
+    position: fixed;
+    border: rgb(200, 255, 0);
+    box-shadow: 0px 0px 10px rgb(200, 255, 0);
+    border-style: solid;
+    transition: all 0.15s;
+}
+
+.settings:hover{
+    padding: 3px;
+}
+
+.settings:active{
+    padding: 1px;
+    opacity: 0.9;
+}
+
+.settingsImg{
+    width: 60px;
+}
+
+@media (max-width: 600px) {
+    .mainBack, .homeImg, .open.settings, .noOpen.settings, .settingsImg{
+        width: 40px;
+        height: 40px;
+        left: 10px;
+        top: 10px;
+    }
+    .themeSwitch, .themeImg{
+        width: 40px;
+        height: 40px;
+        right: 10px;
+        top: 10px;
+    }
+    .reset{
+        position: relative;
+        margin-top: 300px;
+    }
+    .button{
+        font-size: 20px;
+        align-items: center;
+        margin: 0px;
+        padding: 1% 1.4%;
+    }
+    .static .button{
+        font-size: 15px;
+    }
+    .newsManager{
+        width: 50%;
+        font-size: 15px;
+    }
+    .icon{
+        width: 40px;
+    }
+    .daily{
+        width: 150px;
+    }
+    .ht{
+        flex-shrink: 0;
+        width: 110px;
+        z-index: 1;
+    }
+    .news-page{
+        width: 90px;
+        padding: 1% 5%;
+    }
+    .delete{
+        width: 20px;
+        height: 20px;
+        padding: 1px;
+    }
+    .editT{
+        width: 20px;
+        height: 20px;
+        padding: 1px;
+    }
+    .cancel{
+        width: 20px;
+        height: 20px;
+        padding: 1px;
+    }
+    .conf{
+        width: 20px;
+        height: 20px;
+        padding: 1px;
+    }
+    .imageConvert{
+        font-size: 100%;
+    }
+}
+
+@media (max-height: 600px){
+    .imageConvert{
+        font-size: 100%;
+    }
+    .reset{
+        position: relative;
+        margin-top: 300px;
+    }
+}
+@media (max-height: 400px){
+    .imageConvert{
+        font-size: 100%;
+    }
+    .reset{
+        position: relative;
+        margin-top: 300px;
+    }
+}

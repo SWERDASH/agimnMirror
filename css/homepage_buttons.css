@@ -1,0 +1,123 @@
+.button-body{
+    background-color: rgb(217, 217, 217);
+    height: 210px;
+    width: 100%;
+    transition: all 0.3s;
+    position:relative;
+    border-radius: 0 60px 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+.theme-inv .button-body{
+    background-color: rgb(255, 255, 255);
+}
+
+.button-body:hover{
+    padding: 10px 0px;
+    cursor: pointer;
+    background-color: rgb(230, 230, 230);
+    box-shadow: inset 0 0 50px rgb(217, 217, 217);
+}
+
+.theme-inv .button-body:hover{
+    background-color: rgb(255, 255, 255);
+}
+
+.button-body.daily{
+    flex: 1 75%;
+    border-radius: 60px 60px 0 0;
+}
+
+.button-body.news-page{
+    border-radius: 60px 0 0 0;
+}
+
+.review{
+    display: flex;
+    width: 120px;
+    height: 120px;
+    justify-content: center;
+    transition: all 0.15s;
+    top:0;
+    right: 0;
+    left: 0;
+    position: fixed;
+    justify-self: center;
+    z-index: 11;
+}
+.review:hover{
+    opacity: 0.8;
+}
+
+.settingsImg, .themeImg{
+    width: 70px;
+}
+
+.settings, .themeSwitch, .resetButton{
+    background-color: rgb(39, 39, 39);
+    width: 70px;
+    height: 70px;
+    padding: 2px;
+    border-color: white;
+    border-style: solid;
+    border-radius: 19px;
+    margin: 5px;
+    transition: all 0.15s;
+}
+
+.settings:hover, .themeSwitch:hover, .resetButton:hover{
+    padding: 3px;
+    cursor: pointer;
+}
+
+.settings:active, .themeSwitch:active, .resetButton:active{
+    padding: 1px;
+}
+
+.resetButton{
+    position: absolute;
+    margin-left: 100px;
+}
+
+@media (max-width: 1500px) {
+    .button-body:hover{
+        padding: 2px 0px;
+}
+}
+@media (max-width: 1050px) {
+    .button-body:hover{
+        padding: 1px 0px;
+    }
+}
+@media (max-width: 600px) {
+    .button-body{
+        flex: 0;
+        background: none;
+        visibility: hidden;
+        width: 100px;
+        height: 100px;
+        margin: 20px;
+    }
+    .button-body.ht{
+        left: 30px;
+        align-self: self-start;
+    }
+    .button-body.daily{
+        flex: 0;
+    }
+    .button-body.news-page{
+        align-self: self-end;
+        right: 30px;
+    }
+    .settings, .themeSwitch, .settingsImg, .themeImg, .resetButton{
+        width: 50px;
+        height: 50px;
+    }
+    .review{
+        bottom: 0;
+        left: 0;
+        right: unset;
+        top: unset;
+    }
+}

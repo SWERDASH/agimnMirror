@@ -1,0 +1,35 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>Оставить отзыв</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="stylesheet" href="/public/css/review.css">
+        <link rel="icon" type="image/x-icon" href="/public/icons/rate_review_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg">
+    </head>
+    <body>
+        <div class="upperButtons">
+                <div class="mainBack"><img class="homeImg" src="/public/icons/home_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg"></div>
+                <div class="themeSwitch"><img class="themeImg" src="/public/icons/dark_mode_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg"></div>
+        </div>
+        <div class="review-page">
+            <div class="review">
+                <div class="rate">
+                    <div class="reviewRateBox"><img class="icon" id="value-0" src="/public/icons/Look.svg"><div class="value rate-Look"></div><p>Вид</p></div>
+                    <div class="reviewRateBox"><img class="icon" id="value-1" src="/public/icons/UserF.svg"><div class="value rate-UserFr"></div><p>Понятность</p></div>
+                    <div class="reviewRateBox"><img class="icon" id="value-2" src="/public/icons/GenImp.svg"><div class="value rate-GenImp"></div><p>Общее впечатление</p></div>
+                </div>
+                <div class="Comment-and-submit">
+                    <textarea class="reviewComment" id="Comment" placeholder="Текст отзыва"></textarea>
+                    <div class="bottomComment">
+                        <input class="User-data" type="text" placeholder="Автор">
+                        <div class="addButton">Оставить отзыв</div>
+                    </div>
+                    <pre class="total" id="total">1.00/5.00</pre>
+                </div>
+            </div>
+        </div>
+        <script type="module" src="/public/js/main.js"></script>
+        <script type="module" src="/public/js/review.js"></script>
+    </body>
+</html>

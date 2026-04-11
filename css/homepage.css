@@ -1,0 +1,339 @@
+body{
+    overflow: none;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    display: flex;
+    user-select: none;
+}
+.theme-inv{
+    filter: invert();
+}
+
+html{
+    transition: all 0.5s;
+    display: flex;
+}
+.template{
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    z-index: -1;
+    opacity: 0;
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    object-position: 0px 0px;
+}
+.main-buttons{
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    justify-content: space-around;
+    align-items: end;
+}
+.upperButtons{
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    z-index: 11;
+    width: 100%;
+}
+
+.icon{
+    width: 11%;
+    bottom: 210px;
+    z-index: -1;
+    position: fixed;
+    filter: drop-shadow(0 5px 5px rgba(187, 187, 187, 0.5));
+    transition: all 0.15s;
+}
+
+.review-icon{
+    width: 70px;
+    top: 25px;
+    position: absolute;
+    z-index: -1;
+}
+
+.button:hover .icon{
+    filter: drop-shadow(0 0 5px rgb(230, 230, 230));
+}
+
+.texting{
+    position: fixed;
+    bottom: 50px;
+    filter: drop-shadow(0 5px 5px rgba(187, 187, 187, 0.5));
+    width: 25%;
+    z-index: -1;
+}
+
+.review-texting{
+    position: fixed;
+    filter: drop-shadow(0 5px 5px rgba(187, 187, 187, 0.5));
+    width: 115px;
+    z-index: -1;
+}
+
+.settingsContainer{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    justify-content: space-around;
+    align-items:end;
+}
+
+.customColor{
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: black;
+    border: none;
+    display: flex;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.colorD, .colorHW, .colorN{
+    height: 210px;
+    width: 100%;
+}
+
+.colorHW{
+    border-radius: 0 60px 0 0;
+}
+.colorD{
+    flex: 1 75%;
+    border-radius: 60px 60px 0 0;
+}
+.colorN{
+    border-radius: 60px 0 0 0;
+}
+.colorBG{
+    position: absolute;
+    align-self: flex-start;
+    top: 20%;
+    width: 200px;
+}
+
+.announcementFrame{
+    width: 60%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(39, 39, 39);
+    border: white 2px solid;
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    display: flex;
+    border-radius: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+}
+
+.announceTitle{
+    font-size: 250%;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.announceText{
+    text-align: left;
+    margin:5px;
+}
+
+.announceButton{
+    margin: 20px;
+    text-align: center;
+    width: 50%;
+    padding: 20px;
+    border: white 2px solid;
+    border-radius: 20px;
+    user-select: none;
+    cursor: pointer;
+    background-color: rgb(59, 59, 59);
+    transition: all 0.15s;
+}
+
+.announceButton:hover{
+    padding: 22px;
+}
+
+.excursionFog{
+    transition: all 0.5s;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 10;
+}
+
+.excursion-text{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    font-size: 200%;
+    position: relative;
+    margin: 10px;
+    top: 90px;
+    transition: all 0.15s;
+}
+
+.excursion{
+    filter: drop-shadow(0 0 20px white);
+}
+
+@media (max-width: 1500px) {
+    .icon{
+        width: 7%;
+        bottom: 215px;
+    }
+    .texting{
+        bottom: 100px;
+        width: 20%;
+    }
+}
+
+@media (max-width: 1230px) {
+    .icon{
+        width: 7%;
+        bottom: 215px;
+    }
+    .texting{
+        bottom: 12.5px;
+        width: 20%;
+    }
+}
+
+@media (max-width: 1050px) {
+    .icon{
+        width: 4%;
+        bottom: 23%;
+    }
+    .texting{
+        bottom: 15%;
+        width: 15%;
+    }
+}
+@media (max-width: 850px) {
+    @media (max-height: 1200px) {
+        .icon{
+            width: 9%;
+            bottom: 24%;
+        }
+        .texting{
+            bottom: 20%;
+            width: 20%;
+        }
+    }
+    @media (max-height: 1000px) {
+        .icon{
+            width: 5%;
+            bottom: 23%;
+        }
+        .texting{
+            bottom: 15%;
+            width: 20%;
+        }
+    }
+}
+@media (max-width:600px) {
+    .customColor{
+        width: 20%;
+        height: 10%;
+        right: 50px;
+    }
+    .colorD,.colorHW,.colorN{
+        display: none;
+    }
+    .main-buttons{
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 50px;
+        transform: translate(0, 7.5%);
+        bottom: 0;
+        height: 100%;
+        flex-direction: column;
+    }
+    .button-elements{
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        bottom: 0;
+        top: 0;
+        height: 100px;
+    }
+    .texting{
+        position: relative;
+        width: 200px;
+        height: 200px;
+        bottom: 0;
+        top: 0;
+        left: 50%;
+        visibility: visible;
+    }
+    .icon{
+        position: relative;
+        visibility: visible;
+        width: 100px;
+        height: 100px;
+        transform: translate(-100%, 50%);
+        bottom: 0;
+        top: 0;
+    }
+    .excursion-text{
+        font-size: 100%;
+    }
+    .announceTitle{
+        font-size: 150%;
+    }
+    @media (max-height: 1000px) {
+        .main-buttons{
+            gap: 150px;
+        }
+    }
+    @media (max-height:850px) {
+        .main-buttons{
+            gap: 70px;
+        }
+    }
+    @media (max-height: 600px) {
+        .main-buttons{
+            justify-content: center;
+            transform: translate(0);
+            gap: 20px;
+        }
+        .texting{
+            position: relative;
+            width: 150px;
+            height: 150px;
+            bottom: 0;
+            top: 0;
+            left: 37.5%;
+        }
+        .icon{
+            position: relative;
+            width: 75px;
+            height: 75px;
+            transform: translate(-100%, 50%);
+            bottom: 0;
+            top: 0;
+        }
+    }
+}
+
+@media (max-width:360px) {
+    @media (max-height:640px) {
+        .main-buttons{
+            gap: 50px;
+            justify-content: start;
+            transform: translate(0, 5%);
+        }
+    } 
+}

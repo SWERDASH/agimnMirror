@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Домашнее задание</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="stylesheet" href="/public/css/hometask.css">
+        <link rel="stylesheet" href="/public/css/hometask_buttons.css">
+        <link rel="stylesheet" href="/public/css/hometask_animations.css">
+        <link rel="icon" type="image/x-icon" href="/public/icons/lists_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg">
+    </head>
+    <body class="BG" style="height: auto;">
+        <div class="expanded-image"></div>
+        <div class="taskpage">
+            <div class="upperButtons">
+                <div class="mainBack"><img class="homeImg" src="/public/icons/home_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg"></div>
+                <div class="themeSwitch"><img class="themeImg" src="/public/icons/dark_mode_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg"></div>
+                <div class="settings noOpen"><img class="settingsImg" src="/public/icons/settings.svg"></div>
+            </div>
+            <div class="frame">
+                <div class="filter-frame HWFR">
+                    <div class="filter">
+                        <div class="custom-select">
+                            <select class="subj" id="subj" title="Предмет" name="select">
+                                <option id="0" src="/public/icons/subjects.svg">Предметы</option>
+                                <option id="1" src="/public/icons/Математика.svg">Математика</option>
+                                <option id="2" src="/public/icons/Русский.svg">Русский</option>
+                                <option id="3" src="/public/icons/Литература.svg">Литература</option>
+                                <option id="4" src="/public/icons/Английский.svg">Английский</option>
+                                <option id="5" src="/public/icons/Физика.svg">Физика</option>
+                                <option id="6" src="/public/icons/Химия.svg">Химия</option>
+                                <option id="7" src="/public/icons/История.svg">История</option>
+                                <option id="8" src="/public/icons/Общество.svg">Общество</option>
+                                <option id="9" src="/public/icons/География.svg">География</option>
+                                <option id="10" src="/public/icons/Биология.svg">Биология</option>
+                                <option id="11" src="/public/icons/Педагогика.svg">Педагогика</option>
+                                <option id="12" src="/public/icons/Информатика.svg">Информатика</option>
+                                <option id="13" src="/public/icons/Раб_с_текстом.svg">Раб с текстом</option>
+                                <option id="14" src="/public/icons/ОБЗР.svg">ОБЗР</option>
+                                <option id="0" src="/public/icons/subjects.svg">Предметы</option>
+                            </select>
+                        </div>
+                        <input type="date" class="date date-choose DATE">
+                        <div class="custom-select">
+                            <select class="type" id="type" title="Не важно" name="select">
+                                <option id="0" src="/public/icons/0.svg">Не важно</option>
+                                <option id="1" src="/public/icons/1.svg">Устно</option>
+                                <option id="2" src="/public/icons/2.svg">Письменно</option>
+                                <option id="3" src="/public/icons/3.svg">Уст. пис.</option>
+                                <option id="0" src="/public/icons/0.svg">Не важно</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="task-frame HWFR">
+                    <div class="homework">
+                        <div class="placeHolder">
+                            <div class="loading"></div>
+                            Задания подгружаются
+                        </div>
+                    </div>
+                </div>
+            </div>   
+        </div>
+        <script type="module" src="/public/js/main.js"></script>
+        <script type="module" src="/public/js/hometaskpage.js"></script>
+        <script type="module" src="/public/js/select.js"></script>
+    </body>
+</html>
