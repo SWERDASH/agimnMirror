@@ -51,6 +51,19 @@ html{
     transition: all 0.15s;
 }
 
+.timer{
+    z-index: 2;
+    position: fixed;
+    width: 15dvw;
+    height: 7dvh;
+    align-self: center;
+    text-align: center;
+    font-size: 1.2dvw;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    transform: translate(42.5dvw, 12dvh);
+}
+
 .review-icon{
     width: 70px;
     top: 25px;
@@ -250,6 +263,11 @@ html{
     }
     .colorD,.colorHW,.colorN{
         display: none;
+    }
+    .timer{
+        width: 10dvh;
+        transform: translateX(40.5dvw);
+        font-size: 2dvh;
     }
     .main-buttons{
         display: flex;
