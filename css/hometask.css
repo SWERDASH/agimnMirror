@@ -632,10 +632,29 @@ html{
     cursor: pointer;
     z-index: 10;
 }
+.timer{
+    z-index: 2;
+    position: fixed;
+    width: 25dvw;
+    align-self: center;
+    text-align: center;
+    font-size: 15px;
+    align-items: center;
+    border-radius: 20px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    transform: translate(37.5dvw, 5dvh);
+}
 
 
 
 @media (max-width: 600px) {
+    .timer{
+        background-color: rgb(39, 39, 39);
+        width: 20dvh;
+        font-size: 1.6dvh;
+        transform: translate(29.4dvw, 7.5dvh);
+    }
     .ExpI{
         width: 80%;
     }
