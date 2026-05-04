@@ -34,7 +34,7 @@ if (document.querySelector('.news-page')){
 
 function formD(x=String){
     var s = ""
-    if(5 <= parseInt(String(x).at(-1)) && parseInt(String(x).at(-1)) <= 9){
+    if(5 <= parseInt(String(x).at(-1)) && parseInt(String(x).at(-1)) <= 9 || String(x).at(-1)=="0"){
         s = "Дней"
     }
     if(String(x).endsWith("1") && x != "11"){
