@@ -50,18 +50,36 @@ html{
     filter: drop-shadow(0 5px 5px rgba(187, 187, 187, 0.5));
     transition: all 0.15s;
 }
-
 .timer{
     z-index: 2;
-    position: fixed;
-    width: 15dvw;
-    height: 7dvh;
+    position: relative;
     align-self: center;
     text-align: center;
-    font-size: 1.2dvw;
+    font-size: 15px;
+    background-color: rgb(39, 39, 39);
+    border-color: aliceblue;
+    border:solid 2px;
+    align-items: center;
+    border-radius: 20px;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: white;
-    transform: translate(42.5dvw, 12dvh);
+    word-break: keep-all;
+    white-space: pre-wrap;
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+}
+.timer p{
+    margin: 5px 10px;
+}
+.timerSpace{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+    width: 100dvw;
+    bottom: 1dvh;
+    position: fixed;
 }
 
 .review-icon{
@@ -265,8 +283,6 @@ html{
         display: none;
     }
     .timer{
-        width: 10dvh;
-        transform: translateX(40.5dvw);
         font-size: 2dvh;
     }
     .main-buttons{
