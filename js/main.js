@@ -47,11 +47,7 @@ function formD(x=String){
 }
 
 function zeroFormat(x){
-    if (String(x)[0] != "0" && String(x).length < 2){
-        return `0${x}`
-    }else{
-        return x
-    }
+    return String(x).padStart(2, "0")
 }
 function timeDelta( start, end, params, only_totals ) {
 
@@ -83,15 +79,22 @@ function timeDelta( start, end, params, only_totals ) {
 }
 function setTime(timer){
     var now = new Date()
-    var until = new Date("2026-06-04T00:00:00Z")
-    var still = timeDelta(now, until, "dhms", 0)
-    timer.innerHTML = `До ЕГЭ по русскому: ${still.d} ${formD(still.d)}, ${zeroFormat(still.h)}:${zeroFormat(still.m)}:${zeroFormat(still.s)}`
+    var rus = timeDelta(now, new Date("2026-06-04T00:00:00Z"), "dhms", 0)
+    var m = timeDelta(now, new Date("2026-06-08T00:00:00Z"), "dhms", 0)
+    timer.innerHTML = `До ЕГЭ:`
+    timer.innerHTML += `<p>По русскому: ${rus.d} ${formD(rus.d)}, ${zeroFormat(rus.h)}:${zeroFormat(rus.m)}:${zeroFormat(rus.s)}</p>`
+    timer.innerHTML += `<p>По математике: ${m.d} ${formD(m.d)}, ${zeroFormat(m.h)}:${zeroFormat(m.m)}:${zeroFormat(m.s)}</p>`
     setTimeout(() =>{setTime(timer)}, 500)
 }
 
-if (document.querySelector(".upperButtons")){
-    var timer = document.createElement("DIV")
-    timer.setAttribute("class", "timer")
-    document.querySelector(".upperButtons").append(timer)
+if (document.querySelector(".timerSpace")){
+    if (!document.querySelector(".timer")){
+        var timer = document.createElement("DIV")
+        timer.setAttribute("class", "timer")
+        document.querySelector(".timerSpace").append(timer)
+    }
+    else{
+        var timer = document.querySelector(".timer")
+    }
     setTime(timer)
 }
